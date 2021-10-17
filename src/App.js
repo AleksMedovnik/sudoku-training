@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.scss';
+import GameOver from './GameOver';
+import Main from './Main';
+import Menu from './Menu';
+import Win from './Win';
 
 function App() {
-  return (
-    <div className="App">
-        <h1>Sudoku</h1>
-    </div>
-  );
+    return (
+        <div className="app">
+            {/* <Menu /> */}
+            <Main />
+            {/* <Win /> */}
+            {/* <GameOver /> */}
+        </div>
+    );
 }
 
 export default App;

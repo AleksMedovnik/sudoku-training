@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+// variables
+$fontURL: "./fonts/neucha-v12-latin-regular.";
+$bgWrap: rgb(106, 187, 201);
+$widthTD: 50px;
+$borderTD: 1px solid rgb(112, 102, 102);
+$borderTR: 2px solid black;
+$colorRed: rgb(236, 19, 19);
+$linkStartBG: rgb(8, 103, 141);
+$linkStartColor: rgb(233, 158, 19);
+
+// mixins
+@mixin d-flex() {
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@mixin wrap() {
+    @include d-flex();
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* neucha-regular - latin */
+@font-face {
+    font-family: "Neucha";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Neucha"), url($fontURL + "eot?#iefix") format("embedded-opentype"),
+        url($fontURL + "woff2") format("woff2"), url($fontURL + "woff") format("woff"),
+        url($fontURL + "ttf") format("truetype"), url($fontURL + "svg#Neucha") format("svg");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+ul,
+ol,
+li {
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    text-decoration: none;
+}
+
+.app {
+    @include wrap();
+    font-family: "Neucha";
+    font-size: 1.2rem;
+    background: $bgWrap;
+}
+
+.container {
+    @include d-flex();
+    width: 95%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title{
+    letter-spacing: 5px;
+}
+
+.link-start {
+    @include wrap ();
+    width: 180px;
+    height: 50px;
+    background: $linkStartBG;
+    border-radius: 5px;
+    color: $linkStartColor;
+}
+.table {
+    border-collapse: collapse;
+    border: $borderTR;
+
+    tr:nth-of-type(even) {
+        border-bottom: $borderTR;
+    }
+
+    td {
+        width: $widthTD;
+        height: $widthTD;
+        border: $borderTD;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    td:nth-of-type(3) {
+        border-right: $borderTR;
+    }
+}
+
+.values {
+    @include wrap();
+
+    li {
+        @include wrap();
+
+        width: $widthTD;
+        height: $widthTD;
+        border: $borderTD;
+    }
+}
+
+.errors {
+    color: $colorRed;
 }
