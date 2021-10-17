@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sudoku-training/static/css/main.e18ff05d.chunk.css",
+    "main.js": "/sudoku-training/static/js/main.92b8e8dc.chunk.js",
+    "main.js.map": "/sudoku-training/static/js/main.92b8e8dc.chunk.js.map",
+    "runtime-main.js": "/sudoku-training/static/js/runtime-main.8c885200.js",
+    "runtime-main.js.map": "/sudoku-training/static/js/runtime-main.8c885200.js.map",
+    "static/js/2.28cbd5c2.chunk.js": "/sudoku-training/static/js/2.28cbd5c2.chunk.js",
+    "static/js/2.28cbd5c2.chunk.js.map": "/sudoku-training/static/js/2.28cbd5c2.chunk.js.map",
+    "static/js/3.5206fba2.chunk.js": "/sudoku-training/static/js/3.5206fba2.chunk.js",
+    "static/js/3.5206fba2.chunk.js.map": "/sudoku-training/static/js/3.5206fba2.chunk.js.map",
+    "index.html": "/sudoku-training/index.html",
+    "static/css/main.e18ff05d.chunk.css.map": "/sudoku-training/static/css/main.e18ff05d.chunk.css.map",
+    "static/js/2.28cbd5c2.chunk.js.LICENSE.txt": "/sudoku-training/static/js/2.28cbd5c2.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/sudoku-training/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c885200.js",
+    "static/js/2.28cbd5c2.chunk.js",
+    "static/css/main.e18ff05d.chunk.css",
+    "static/js/main.92b8e8dc.chunk.js"
+  ]
+}
