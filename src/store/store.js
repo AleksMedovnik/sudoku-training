@@ -17,14 +17,6 @@ const store = {
         return this._state;
     },
 
-    _callSubscriber() { // пока функция-пустышка
-        console.log('');
-    },
-
-    subscribe(observer) {
-        this._callSubscriber = observer; // пустышку переприсваиваем в другую функцию 
-    },
-
 }
 
 export default store;
