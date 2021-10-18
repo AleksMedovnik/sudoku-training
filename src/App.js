@@ -1,9 +1,9 @@
 import { Route } from 'react-router';
 import './App.scss';
-import GameOver from './GameOver';
-import Main from './Main';
-import Menu from './Menu';
-import Win from './Win';
+import GameOver from './components/GameOver';
+import Main from './components/Main';
+import Menu from './components/Menu';
+import Win from './components/Win';
 
 function App() {
     return (
