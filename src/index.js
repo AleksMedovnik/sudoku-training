@@ -4,13 +4,20 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import store from './store/store';
 
-ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+
+const render = state => {
+  ReactDOM.render(
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <App state={state} />
+    </BrowserRouter>,
+    document.getElementById('root')
+  );
+}
+store.subscribe(render);
+render(store.getState())
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
