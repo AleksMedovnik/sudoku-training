@@ -7,13 +7,16 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './store/store';
 
 
-
+const render = state => {
   ReactDOM.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App state={store.getState()} />
+      <App matrix={state.matrix.start} valuesData={state.values} errors={state.errors} />
     </BrowserRouter>,
     document.getElementById('root')
   );
+}
+store.subscribe(render); // передаем функцию в store
+render(store.getState());
 
 
 reportWebVitals();

@@ -9,7 +9,9 @@ function App(props) {
     return (
         <div className="app">
             <Route exact path={["/", "/menu"]} render={() => <Menu />} />
-            <Route path='/main' render={() => <Main state={props.state} />} />
+            <Route path='/main' render={() => {
+                return <Main matrix={props.matrix} valuesData={props.valuesData} errors={props.errors} />
+            }} />
             <Route path='/win' render={() => <Win />} />
             <Route path='/gameOver' render={() => <GameOver />} />
         </div>

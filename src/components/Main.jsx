@@ -1,5 +1,5 @@
 const Main = (props) => {
-    const tbody = props.state.matrix.map((tr, trIndex) => {
+    const tbody = props.matrix.map((tr, trIndex) => {
         return (
             <tr key={`_${trIndex}`}>{tr.map((td, index) => {
                 return (
@@ -11,7 +11,7 @@ const Main = (props) => {
             </tr>
         )
     });
-    const values = props.state.valuesData.map(i => <li key={i} data-value={i}>{i}</li>);
+    const values = props.valuesData.map(i => <li key={i} data-value={i}>{i}</li>);
     
 
     return (
@@ -24,7 +24,7 @@ const Main = (props) => {
             <ul className='values'>
                 {values}
             </ul>
-            <div className='errors'>Errors: {props.state.errors} / 3</div>
+            <div className='errors'>Errors: {props.errors} / 3</div>
         </div>
     );
 }
