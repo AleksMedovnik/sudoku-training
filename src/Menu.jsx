@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 const Menu = () => {
     return (
         <div className='container'>
             <h1 className='title'>Sudoku</h1>
-            <a href="#" className='link-start'>Start Game</a>
+            <NavLink to='/main' className='link-start'>Start Game</NavLink>
         </div>
     );
 }
