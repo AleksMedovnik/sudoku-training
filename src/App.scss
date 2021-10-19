@@ -7,6 +7,7 @@ $borderTR: 2px solid black;
 $colorRed: rgb(236, 19, 19);
 $linkStartBG: rgb(8, 103, 141);
 $linkStartColor: rgb(233, 158, 19);
+$activeInputColor: rgb(36, 121, 136);
 
 // mixins
 @mixin d-flex() {
@@ -81,7 +82,7 @@ a {
         border-bottom: $borderTR;
     }
 
-    td {
+    .td {
         width: $widthTD;
         height: $widthTD;
         border: $borderTD;
@@ -89,8 +90,12 @@ a {
         cursor: pointer;
     }
 
-    td:nth-of-type(3) {
+    .td:nth-of-type(3) {
         border-right: $borderTR;
+    }
+
+    .active-cell{
+        background: $activeInputColor;
     }
 }
 
