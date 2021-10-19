@@ -17,6 +17,7 @@ const store = {
 
     dispatch(action) {
         this._state = reducer(this._state, action);
+        this._callSubscriber(this._state);
     },
 }
 

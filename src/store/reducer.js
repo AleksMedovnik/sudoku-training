@@ -1,4 +1,8 @@
 const SET_VALUE = 'SET-VALUE';
+const START_GAME = 'START-GAME';
+
+export const setValueActionCreator = (value, indexArr) => ({ type: SET_VALUE, value, indexArr });
+export const startGame = () => ({ type: START_GAME })
 
 const data = {
     chooseMatrix() {
@@ -74,7 +78,7 @@ const getInitialState = (data) => {
     }
 }
 
-export const reducer = (state = getInitialState(data), action) => {
+export const reducer = (state = getInitialState(data), action = startGame()) => {
     switch (action.type) {
         case SET_VALUE:
             let newState = {
@@ -88,8 +92,9 @@ export const reducer = (state = getInitialState(data), action) => {
                 newState.errors++;
             }
             return newState;
+
+        case START_GAME:
+            return getInitialState(data);
     }
-    return getInitialState(data);
 }
 
-export const setValueActionCreator = (value, indexArr) => ({ type: SET_VALUE, value, indexArr });
