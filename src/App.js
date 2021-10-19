@@ -10,7 +10,7 @@ function App(props) {
         <div className="app">
             <Route exact path={["/", "/menu"]} render={() => <Menu />} />
             <Route path='/main' render={() => {
-                return <Main matrix={props.matrix} valuesData={props.valuesData} errors={props.errors} />
+                return <Main matrix={props.matrix} valuesData={props.valuesData} errors={props.errors} dispatch={props.dispatch} />
             }} />
             <Route path='/win' render={() => <Win />} />
             <Route path='/gameOver' render={() => <GameOver />} />

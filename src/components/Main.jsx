@@ -1,6 +1,13 @@
 import { useState } from "react";
+import { setValueActionCreator } from '../store/reducer'
 
 const Main = (props) => {
+
+    const setValue = (e) => {
+        const action = setValueActionCreator(e.target.dataset.value, indexArr);
+        // console.log(action)
+        props.dispatch(action);
+    };
 
     const [indexArr, newIndexArr] = useState([0, 0]);
 
@@ -22,7 +29,7 @@ const Main = (props) => {
         )
     });
 
-    const values = props.valuesData.map(i => <li key={i} data-value={i}>{i}</li>);
+    const values = props.valuesData.map(i => <li key={i} data-value={i} onClick={setValue}>{i}</li>);
     
 
     return (

@@ -14,10 +14,11 @@ const store = {
     subscribe(observer) {
         this._callSubscriber = observer; // пустышку переприсваиваем в другую функцию 
     },
-    
+
     dispatch(action) {
         this._state = reducer(this._state, action);
     },
 }
+
 
 export default store;

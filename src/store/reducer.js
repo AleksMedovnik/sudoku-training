@@ -1,3 +1,4 @@
+const SET_VALUE = 'SET-VALUE';
 
 const data = {
     chooseMatrix() {
@@ -74,5 +75,21 @@ const getInitialState = (data) => {
 }
 
 export const reducer = (state = getInitialState(data), action) => {
+    switch (action.type) {
+        case SET_VALUE:
+            let newState = {
+                ...state,
+                matrix: { ...state.matrix, start: [...state.matrix.start] }
+            }
+            let value = +action.value;
+            if (state.matrix.end[action.indexArr[0]][action.indexArr[1]] === value) {
+                newState.matrix.start[action.indexArr[0]][action.indexArr[1]] = value;
+            } else {
+                newState.errors++;
+            }
+            return newState;
+    }
     return getInitialState(data);
 }
+
+export const setValueActionCreator = (value, indexArr) => ({ type: SET_VALUE, value, indexArr });

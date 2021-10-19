@@ -10,7 +10,7 @@ import store from './store/store';
 const render = state => {
   ReactDOM.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App matrix={state.matrix.start} valuesData={state.values} errors={state.errors} />
+      <App matrix={state.matrix.start} valuesData={state.values} errors={state.errors} dispatch={store.dispatch.bind(store)} />
     </BrowserRouter>,
     document.getElementById('root')
   );
