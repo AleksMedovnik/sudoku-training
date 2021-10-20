@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { withRouter } from "react-router";
-import { setValueActionCreator, startGame } from '../store/reducer'
 
 const Main = (props) => {
 
@@ -8,32 +7,29 @@ const Main = (props) => {
         for (let arr of props.matrix) {
             if (arr.includes(0)) return;
         }
-        props.dispatch(startGame());
+        props.startGame();
         props.history.push('/win');
     }
     const isOver = () => {
         if (props.errors >= 3) {
-            props.dispatch(startGame());
+            props.startGame();
             props.history.push('/gameOver');
         }
     }
     useEffect(() => {
         isOver();
         isWin();
-        window.onpopstate = () => props.dispatch(startGame());
+        window.onpopstate = () => props.startGame();
     }, [props.matrix, props.errors]);
 
     const setValue = (e) => {
-        const action = setValueActionCreator(e.target.dataset.value, indexArr);
-        // console.log(action)
-        props.dispatch(action);
+        props.setValueActionCreator(e.target.dataset.value, indexArr);
     };
 
     const [indexArr, newIndexArr] = useState([0, 0]);
 
     const setActiveInput = (a, b) => {
         newIndexArr([a, b]);
-        // console.log(indexArr) - useState асинхронный
     }
 
     const tbody = props.matrix.map((tr, trIndex) => {

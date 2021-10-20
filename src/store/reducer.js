@@ -78,7 +78,7 @@ const getInitialState = (data) => {
     }
 }
 
-export const reducer = (state = getInitialState(data), action = startGame()) => {
+export const reducer = (state = getInitialState(data), action) => {
     switch (action.type) {
         case SET_VALUE:
             let newState = {
@@ -96,5 +96,6 @@ export const reducer = (state = getInitialState(data), action = startGame()) => 
         case START_GAME:
             return getInitialState(data);
     }
+    return state;
 }
 

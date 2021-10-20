@@ -4,19 +4,19 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import store from './store/store';
 
 
-const render = state => {
-  ReactDOM.render(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App matrix={state.matrix.start} valuesData={state.values} errors={state.errors} dispatch={store.dispatch.bind(store)} />
-    </BrowserRouter>,
-    document.getElementById('root')
-  );
-}
-store.subscribe(render); // передаем функцию в store
-render(store.getState());
+
+ReactDOM.render(
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById('root')
+);
 
 
 reportWebVitals();
