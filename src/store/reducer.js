@@ -96,5 +96,6 @@ export const reducer = (state = getInitialState(data), action = startGame()) => 
         case START_GAME:
             return getInitialState(data);
     }
+    return state;
 }
 
