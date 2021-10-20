@@ -6,7 +6,7 @@ const Main = (props) => {
 
     const isWin = () => {
         for (let arr of props.matrix) {
-            if (arr.some(i => i === 0)) return;
+            if (arr.includes(0)) return;
         }
         props.dispatch(startGame());
         props.history.push('/win');
