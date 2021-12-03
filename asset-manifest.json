@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sudoku-training/static/css/main.b8fb626e.chunk.css",
+    "main.css": "/sudoku-training/static/css/main.130967fd.chunk.css",
     "main.js": "/sudoku-training/static/js/main.e18485e2.chunk.js",
     "main.js.map": "/sudoku-training/static/js/main.e18485e2.chunk.js.map",
     "runtime-main.js": "/sudoku-training/static/js/runtime-main.53ddcdeb.js",
@@ -10,14 +10,14 @@
     "static/js/3.ad5ccbfb.chunk.js": "/sudoku-training/static/js/3.ad5ccbfb.chunk.js",
     "static/js/3.ad5ccbfb.chunk.js.map": "/sudoku-training/static/js/3.ad5ccbfb.chunk.js.map",
     "index.html": "/sudoku-training/index.html",
-    "static/css/main.b8fb626e.chunk.css.map": "/sudoku-training/static/css/main.b8fb626e.chunk.css.map",
+    "static/css/main.130967fd.chunk.css.map": "/sudoku-training/static/css/main.130967fd.chunk.css.map",
     "static/js/2.003b40ee.chunk.js.LICENSE.txt": "/sudoku-training/static/js/2.003b40ee.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/sudoku-training/static/media/neucha-v12-latin-regular.da5dccad.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.53ddcdeb.js",
     "static/js/2.003b40ee.chunk.js",
-    "static/css/main.b8fb626e.chunk.css",
+    "static/css/main.130967fd.chunk.css",
     "static/js/main.e18485e2.chunk.js"
   ]
 }
