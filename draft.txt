@@ -1,5 +1,4 @@
-yarn add react-router-dom redux react-redux gh-pages node-sass@4.14 
-react-hook-form axios
+yarn add react-router-dom redux react-redux gh-pages node-sass@4.14 react-hook-form axios
 
 
  
