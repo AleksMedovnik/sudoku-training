@@ -1,4 +1,4 @@
-import { Route } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import GameOver from './components/GameOver';
 import Main from './components/Main';
@@ -8,10 +8,13 @@ import Win from './components/Win';
 function App(props) {
     return (
         <div className="app">
-            <Route exact path={["/", "/menu"]} render={() => <Menu />} />
-            <Route path='/main' render={() => <Main state={props.state} />} />
-            <Route path='/win' render={() => <Win />} />
-            <Route path='/gameOver' render={() => <GameOver />} />
+            <Routes>
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/" element={<Menu />} />
+                <Route path='/main' element={<Main state={props.state} />} />
+                <Route path='/win' element={<Win />} />
+                <Route path='/gameOver' element={<GameOver />} />
+            </Routes>
         </div>
     );
 }
