@@ -81,6 +81,7 @@ const getInitialState = (data) => {
 export const reducer = (state = getInitialState(data), action) => {
     switch (action.type) {
         case SET_VALUE:
+            if(state.matrix.start[action.indexArr[0]][action.indexArr[1]] !== 0) return state
             let newState = {
                 ...state,
                 matrix: { ...state.matrix, start: [...state.matrix.start] }
