@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/sudoku-training/static/css/main.130967fd.chunk.css",
-    "main.js": "/sudoku-training/static/js/main.5fdf88b2.chunk.js",
-    "main.js.map": "/sudoku-training/static/js/main.5fdf88b2.chunk.js.map",
+    "main.js": "/sudoku-training/static/js/main.d3f3f0eb.chunk.js",
+    "main.js.map": "/sudoku-training/static/js/main.d3f3f0eb.chunk.js.map",
     "runtime-main.js": "/sudoku-training/static/js/runtime-main.88ea69bd.js",
     "runtime-main.js.map": "/sudoku-training/static/js/runtime-main.88ea69bd.js.map",
-    "static/js/2.99c60227.chunk.js": "/sudoku-training/static/js/2.99c60227.chunk.js",
-    "static/js/2.99c60227.chunk.js.map": "/sudoku-training/static/js/2.99c60227.chunk.js.map",
+    "static/js/2.9440cafb.chunk.js": "/sudoku-training/static/js/2.9440cafb.chunk.js",
+    "static/js/2.9440cafb.chunk.js.map": "/sudoku-training/static/js/2.9440cafb.chunk.js.map",
     "static/js/3.1dc8d52f.chunk.js": "/sudoku-training/static/js/3.1dc8d52f.chunk.js",
     "static/js/3.1dc8d52f.chunk.js.map": "/sudoku-training/static/js/3.1dc8d52f.chunk.js.map",
     "index.html": "/sudoku-training/index.html",
     "static/css/main.130967fd.chunk.css.map": "/sudoku-training/static/css/main.130967fd.chunk.css.map",
-    "static/js/2.99c60227.chunk.js.LICENSE.txt": "/sudoku-training/static/js/2.99c60227.chunk.js.LICENSE.txt",
+    "static/js/2.9440cafb.chunk.js.LICENSE.txt": "/sudoku-training/static/js/2.9440cafb.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/sudoku-training/static/media/neucha-v12-latin-regular.da5dccad.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.88ea69bd.js",
-    "static/js/2.99c60227.chunk.js",
+    "static/js/2.9440cafb.chunk.js",
     "static/css/main.130967fd.chunk.css",
-    "static/js/main.5fdf88b2.chunk.js"
+    "static/js/main.d3f3f0eb.chunk.js"
   ]
 }
