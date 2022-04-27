@@ -7,8 +7,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
-
-
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Provider store={store}>
@@ -17,6 +15,9 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
-
-
 reportWebVitals();
+/* 
+ДЗ
+1. Если пользователь кликает на ячейку, в которой уже установлено какое-то значение, то
+  ничего происходить не должно. 
+*/

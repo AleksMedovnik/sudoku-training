@@ -99,4 +99,3 @@ export const reducer = (state = getInitialState(data), action) => {
     }
     return state;
 }
-

@@ -10,7 +10,7 @@ const mapStateToProps = state => {
     }
 }
 
-/* const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
     return {
         setValueActionCreator(value, indexArr) {
             let action = setValueActionCreator(value, indexArr);
@@ -20,7 +20,7 @@ const mapStateToProps = state => {
             dispatch(startGame());
         }
     }
-} */
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Main)
-export default connect(mapStateToProps, {setValueActionCreator, startGame})(Main)
+export default connect(mapStateToProps, mapDispatchToProps)(Main)
+// export default connect(mapStateToProps, {setValueActionCreator, startGame})(Main)
